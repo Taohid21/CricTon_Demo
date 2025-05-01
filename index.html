@@ -19,7 +19,89 @@
   </style>
 </head>
 <body class="bg-[#111] text-white">
+  <!-- Telegram Pop-up (Upgraded Design) -->
+<div id="telegram-popup" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+">
+  <div style="
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+    padding: 35px 25px;
+    border-radius: 24px;
+    width: 92%;
+    max-width: 360px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: popUpScale 0.35s ease-in-out;
+    position: relative;
+  ">
+    <div style="font-size: 17px; color: #222; margin-bottom: 25px; font-weight: 500;">
+      আমাদের <strong style="color:#0088cc;">টেলিগ্রাম চ্যানেল</strong>-এ যুক্ত হন সর্বশেষ আপডেট পেতে!
+    </div>
+    <a href="https://t.me/yourchannel" target="_blank" style="
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background-color: #0088cc;
+      padding: 10px 22px;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(0,136,204,0.3);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#0077b6'" onmouseout="this.style.backgroundColor='#0088cc'">
+      <i class="bi bi-telegram" style="font-size: 20px;"></i> Join Now
+    </a>
+    <button onclick="document.getElementById('telegram-popup').remove()" style="
+      padding: 10px 20px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    " onmouseover="this.style.background='#e84343'" onmouseout="this.style.background='#ff4d4d'">
+      Close
+    </button>
+  </div>
+</div>
 
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- Custom Animation Styles -->
+<style>
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes popUpScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+</style>
+</div>
   <header class="bg-[#1a1a1a] border-b border-red-600">
     <div class="max-w-5xl mx-auto py-4 flex justify-between items-center px-4">
       <img alt="Fredflix Logo" class="h-10 object-contain" src="https://i.postimg.cc/cCVbQZxP/3558447-icohome.png" />
