@@ -41,32 +41,35 @@
       </div>
     </section>
 
-    <!-- Live Events -->
-    <section class="border border-white rounded-xl p-6 space-y-6 bg-[#1a1a1a] shadow-lg">
-      <div class="flex justify-center">
-        <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-red-600 transition">
-          <i class="fas fa-broadcast-tower text-red-600"></i>
-          <span>Live Events</span>
-        </button>
+    <!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+<!-- Live Events Section -->
+<section class="bg-[#1a1a1a] border border-white rounded-2xl p-6 shadow-2xl space-y-6 max-w-screen-lg mx-auto">
+  <div class="flex justify-center">
+    <button class="flex items-center gap-3 border border-white rounded-full px-6 py-2 text-white text-xl font-bold hover:bg-red-600 transition-all duration-300">
+      <i class="fas fa-broadcast-tower text-red-600 text-2xl animate-pulse"></i>
+      <span class="tracking-wide">Live Events</span>
+    </button>
+  </div>
+  <div class="flex justify-center gap-6 flex-wrap">
+    <a href="https://example.com/live1" target="_blank" class="hover:scale-110 transform transition-all duration-300">
+      <div class="w-24 h-24 rounded-full border-4 border-red-600 p-1 bg-white overflow-hidden flex items-center justify-center shadow-md">
+        <img src="https://image.tsports.com/images/mobile_thumbnail/1742534265-IMG_3293.jpeg" alt="PSL Live 03" class="w-full h-full object-cover rounded-full" />
       </div>
-      <div class="flex justify-center space-x-8">
-        <a href="https://example.com/live1" target="_blank" class="transform hover:scale-110 transition">
-          <div class="border-4 border-red-600 rounded-full p-1 w-24 h-24 flex items-center justify-center bg-white">
-            <img alt="PSL Live 03" class="rounded-full w-20 h-20" src="https://image.tsports.com/images/mobile_thumbnail/1742534265-IMG_3293.jpeg" />
-          </div>
-        </a>
-        <a href="https://example.com/live2" target="_blank" class="transform hover:scale-110 transition">
-          <div class="border-4 border-red-600 rounded-full p-1 w-24 h-24 flex items-center justify-center bg-white">
-            <img alt="PSL Live 01" class="rounded-full w-20 h-20" src="https://image.tsports.com/images/mobile_thumbnail/1744288356-LIVE-1280.jpg" />
-          </div>
-        </a>
-        <a href="https://example.com/live3" target="_blank" class="transform hover:scale-110 transition">
-          <div class="border-4 border-red-600 rounded-full p-1 w-24 h-24 flex items-center justify-center bg-white">
-            <img alt="TSports" class="rounded-full w-20 h-20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDt3AvuzshqcUgTo2bs5--xukmE138PE9iwWIkK4pbzdnQsFrtYFL5lWod&s=10" />
-          </div>
-        </a>
+    </a>
+    <a href="https://example.com/live2" target="_blank" class="hover:scale-110 transform transition-all duration-300">
+      <div class="w-24 h-24 rounded-full border-4 border-red-600 p-1 bg-white overflow-hidden flex items-center justify-center shadow-md">
+        <img src="https://image.tsports.com/images/mobile_thumbnail/1744288356-LIVE-1280.jpg" alt="PSL Live 01" class="w-full h-full object-cover rounded-full" />
       </div>
-    </section>
+    </a>
+    <a href="https://example.com/live3" target="_blank" class="hover:scale-110 transform transition-all duration-300">
+      <div class="w-24 h-24 rounded-full border-4 border-red-600 p-1 bg-white overflow-hidden flex items-center justify-center shadow-md">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDt3AvuzshqcUgTo2bs5--xukmE138PE9iwWIkK4pbzdnQsFrtYFL5lWod&s=10" alt="TSports" class="w-full h-full object-cover rounded-full" />
+      </div>
+    </a>
+  </div>
+</section>
 
     <!-- Movie Section -->
     <section class="space-y-6">
