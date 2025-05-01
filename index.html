@@ -105,29 +105,43 @@
   </div>
 </section>
     <!-- Movie Section -->
-    <section class="space-y-6">
-      <div class="flex justify-center mb-6">
-        <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-red-600 transition">
-          <i class="fas fa-film text-red-600"></i>
-          <span>Movies</span>
-        </button>
+    <section class="space-y-6 px-4">
+  <div class="flex justify-center mb-6">
+    <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-red-600 transition">
+      <i class="fas fa-film text-red-600"></i>
+      <span>Movies</span>
+    </button>
+  </div>
+
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="font-bold text-white text-2xl relative after:absolute after:bottom-0 after:left-0 after:w-1/4 after:h-1 after:bg-red-600 after:rounded-full">All Movies</h2>
+    <span class="text-sm text-gray-400 cursor-pointer hover:text-white transition">SEE ALL</span>
+  </div>
+
+  <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+    <!-- Movie Card -->
+    <a href="https://example.com/movie1" target="_blank" class="relative flex-shrink-0 w-32 h-48 rounded-xl overflow-hidden transform hover:scale-105 transition group">
+      <img src="https://storage.googleapis.com/a1aa/image/2f669b7f-4646-4e3a-2a31-1bc6c4ac0c76.jpg" alt="Day of Reckoning" class="w-full h-full object-cover" />
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>
+      
+      <!-- Title -->
+      <div class="absolute bottom-3 left-3 right-3 text-white text-sm font-semibold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition">
+        Day of Reckoning
       </div>
-      <div class="flex justify-between items-center mb-4 px-2">
-        <h2 class="font-bold text-white text-2xl">New Releases</h2>
-        <span class="text-sm text-gray-400 cursor-pointer hover:text-white transition">SEE ALL</span>
+      
+      <!-- Play Icon -->
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition">
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-full">
+          <i class="fas fa-play text-white text-xl"></i>
+        </div>
       </div>
-      <div class="flex space-x-4 overflow-x-auto pb-4">
-        <a href="https://example.com/movie1" target="_blank" class="flex-shrink-0 transform hover:scale-105 transition">
-          <img alt="Day of Reckoning" class="rounded-xl w-32 h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/2f669b7f-4646-4e3a-2a31-1bc6c4ac0c76.jpg" />
-        </a>
-        <a href="https://example.com/movie2" target="_blank" class="flex-shrink-0 transform hover:scale-105 transition">
-          <img alt="Drop" class="rounded-xl w-32 h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/2133d504-fff6-4d77-4344-65d51a8b5566.jpg" />
-        </a>
-        <a href="https://example.com/movie3" target="_blank" class="flex-shrink-0 transform hover:scale-105 transition">
-          <img alt="The Woman in the Window" class="rounded-xl w-32 h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/46c3321c-aac9-4bc5-6611-4fa6167e91df.jpg" />
-        </a>
-      </div>
-    </section>
+    </a>
+
+    <!-- Repeat the above block for each movie -->
+  </div>
+</section>
 
   </main>
 <footer class="bg-[#1a1a1a] text-white p-6">
