@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>CricTon Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive, sans-serif;
+    }
+    .slider-image {
+      transition: opacity 1s ease-in-out;
+    }
+    .dot.active {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+<body class="bg-[#111] text-white">
+
+  <header class="bg-[#1a1a1a] border-b border-red-600">
+    <div class="max-w-5xl mx-auto py-4 flex justify-between items-center px-4">
+      <img alt="Fredflix Logo" class="h-10 object-contain" src="https://i.postimg.cc/cCVbQZxP/3558447-icohome.png" />
+      <div id="clock" class="text-lg font-semibold"></div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 space-y-10 mt-6">
+
+    <!-- Slider -->
+    <section class="relative overflow-hidden rounded-lg">
+      <div class="relative">
+        <img id="slider" class="w-full slider-image rounded-md" src="https://image.tsports.com/images/mobile_thumbnail/1742534265-IMG_3293.jpeg" />
+      </div>
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
+        <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
+        <span class="dot w-3 h-3 rounded-full bg-gray-400"></span>
+      </div>
+    </section>
+
+    <!-- Live Events -->
+    <section class="border border-white rounded-xl p-6 space-y-6 bg-[#1a1a1a] shadow-lg">
+      <div class="flex justify-center">
+        <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-red-600 transition">
+          <i class="fas fa-broadcast-tower text-red-600"></i>
+          <span>Live Events</span>
+        </button>
+      </div>
+      <div class="flex justify-center space-x-8">
+        <a href="https://example.com/live1" target="_blank" class="transform hover:scale-110 transition">
+          <div class="border-4 border-red-600 rounded-full p-1 w-24 h-24 flex items-center justify-center bg-white">
+            <img alt="PSL Live 03" class="rounded-full w-20 h-20" src="https://image.tsports.com/images/mobile_thumbnail/1742534265-IMG_3293.jpeg" />
+          </div>
+        </a>
+        <a href="https://example.com/live2" target="_blank" class="transform hover:scale-110 transition">
+          <div class="border-4 border-red-600 rounded-full p-1 w-24 h-24 flex items-center justify-center bg-white">
+            <img alt="PSL Live 01" class="rounded-full w-20 h-20" src="https://image.tsports.com/images/mobile_thumbnail/1744288356-LIVE-1280.jpg" />
+          </div>
+        </a>
+        <a href="https://example.com/live3" target="_blank" class="transform hover:scale-110 transition">
+          <div class="border-4 border-red-600 rounded-full p-1 w-24 h-24 flex items-center justify-center bg-white">
+            <img alt="TSports" class="rounded-full w-20 h-20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDt3AvuzshqcUgTo2bs5--xukmE138PE9iwWIkK4pbzdnQsFrtYFL5lWod&s=10" />
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Movie Section -->
+    <section class="space-y-6">
+      <div class="flex justify-center mb-6">
+        <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-red-600 transition">
+          <i class="fas fa-film text-red-600"></i>
+          <span>Movies</span>
+        </button>
+      </div>
+      <div class="flex justify-between items-center mb-4 px-2">
+        <h2 class="font-bold text-white text-2xl">New Releases</h2>
+        <span class="text-sm text-gray-400 cursor-pointer hover:text-white transition">SEE ALL</span>
+      </div>
+      <div class="flex space-x-4 overflow-x-auto pb-4">
+        <a href="https://example.com/movie1" target="_blank" class="flex-shrink-0 transform hover:scale-105 transition">
+          <img alt="Day of Reckoning" class="rounded-xl w-32 h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/2f669b7f-4646-4e3a-2a31-1bc6c4ac0c76.jpg" />
+        </a>
+        <a href="https://example.com/movie2" target="_blank" class="flex-shrink-0 transform hover:scale-105 transition">
+          <img alt="Drop" class="rounded-xl w-32 h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/2133d504-fff6-4d77-4344-65d51a8b5566.jpg" />
+        </a>
+        <a href="https://example.com/movie3" target="_blank" class="flex-shrink-0 transform hover:scale-105 transition">
+          <img alt="The Woman in the Window" class="rounded-xl w-32 h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/46c3321c-aac9-4bc5-6611-4fa6167e91df.jpg" />
+        </a>
+      </div>
+    </section>
+
+  </main>
+<footer class="bg-[#1a1a1a] text-white p-6">
+  <div class="max-w-xs mx-auto">
+    <img alt="Fredflix logo with TV icon and gradient colors from orange to pink" class="mb-6" height="50" src="https://i.postimg.cc/cCVbQZxP/3558447-icohome.png" width="200"/>
+    <p class="text-base leading-relaxed mb-6">
+      WATCH FREE LIVE SPORTS &amp; TV CHANNEL. Enjoy a wide range of channels and on-demand content.
+    </p>
+    <div class="mb-6">
+      <h2 class="font-extrabold text-xl mb-3">Quick Links</h2>
+      <ul class="space-y-1 text-base font-normal">
+        <li>Home</li>
+        <li>Privacy Policy</li>
+        <li>Disclaimer</li>
+        <li>Terms &amp; Conditions</li>
+        <li>About Us</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="mb-10">
+      <h2 class="font-extrabold text-xl mb-3">Contact Us</h2>
+      <p class="flex items-center space-x-2 text-base font-normal mb-2">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>HIDDEN</span>
+      </p>
+      <p class="flex items-center space-x-2 text-base font-normal">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 234 567 890</span>
+      </p>
+    </div>
+    <p class="text-center text-base font-normal">© CricTon All Rights Reserved.</p>
+  </div>
+</footer>
+  <script>
+    const clock = document.getElementById('clock');
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; 
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      clock.innerHTML = `${hours}:${minutes} ${ampm}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    const images = [
+      "https://image.tsports.com/images/mobile_thumbnail/1742534265-IMG_3293.jpeg",
+      "https://image.tsports.com/images/mobile_thumbnail/1744288356-LIVE-1280.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDt3AvuzshqcUgTo2bs5--xukmE138PE9iwWIkK4pbzdnQsFrtYFL5lWod&s=10"
+    ];
+    const slider = document.getElementById('slider');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+
+    function changeSlide() {
+      slider.style.opacity = 0;
+      setTimeout(() => {
+        slider.src = images[current];
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[current].classList.add('active');
+        slider.style.opacity = 1;
+        current = (current + 1) % images.length;
+      }, 500);
+    }
+    setInterval(changeSlide, 3000);
+    dots[current].classList.add('active');
+  </script>
+
+</body>
+</html>
