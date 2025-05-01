@@ -167,6 +167,125 @@
 </script>
   </div>
 
+    <!-- Movie Section -->
+<section class="space-y-6 px-4">
+  <div class="flex justify-center mb-6">
+    <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-red-600 transition">
+      <i class="fas fa-film text-red-600"></i>
+      <span>Movies</span>
+    </button>
+  </div>
+
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="font-bold text-white text-2xl relative after:absolute after:bottom-0 after:left-0 after:w-1/4 after:h-1 after:bg-red-600 after:rounded-full">All Movies</h2>
+    <span class="text-sm text-gray-400 cursor-pointer hover:text-white transition">SEE ALL</span>
+  </div>
+
+  <div id="movie-container" class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+    <!-- JS will generate cards here -->
+  </div>
+</section>
+
+<script>
+  const movies = [
+    {
+      title: "Borbad",
+      img: "https://storage.googleapis.com/a1aa/image/2f669b7f-4646-4e3a-2a31-1bc6c4ac0c76.jpg",
+      link: "https://example.com/movie1"
+    },
+    {
+      title: "Fast X",
+      img: "https://storage.googleapis.com/a1aa/image/fastx.jpg",
+      link: "https://example.com/fastx"
+    },
+    {
+      title: "The Raid",
+      img: "https://storage.googleapis.com/a1aa/image/theraid.jpg",
+      link: "https://example.com/theraid"
+    }
+    // আরও মুভি এখানে অ্যাড করুন
+  ];
+
+  const container = document.getElementById("movie-container");
+
+  movies.forEach(movie => {
+    const card = document.createElement('a');
+    card.href = movie.link;
+    card.target = "_blank";
+    card.className = "relative flex-shrink-0 w-32 h-48 rounded-xl overflow-hidden transform hover:scale-105 transition group";
+    card.innerHTML = `
+      <img src="${movie.img}" alt="${movie.title}" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>
+      <div class="absolute bottom-3 left-3 right-3 text-white text-sm font-semibold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition">
+        ${movie.title}
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition">
+        <div class="bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-full">
+          <i class="fas fa-play text-white text-xl"></i>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+</script>
+  </div>
+    <!-- Natok - Drama Section -->
+<section class="space-y-6 px-4">
+  <div class="flex justify-center mb-6">
+    <button class="flex items-center border border-white rounded-full px-6 py-2 space-x-2 text-white text-xl font-bold hover:bg-green-600 transition">
+      <i class="fas fa-theater-masks text-green-500"></i>
+      <span>Natok - Drama</span>
+    </button>
+  </div>
+
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="font-bold text-white text-2xl relative after:absolute after:bottom-0 after:left-0 after:w-1/4 after:h-1 after:bg-green-600 after:rounded-full">All Natoks</h2>
+    <span class="text-sm text-gray-400 cursor-pointer hover:text-white transition">SEE ALL</span>
+  </div>
+
+  <div id="natok-container" class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+    <!-- JS will generate cards here -->
+  </div>
+</section>
+
+<script>
+  const natoks = [
+    {
+      title: "Moner Manush",
+      img: "https://storage.googleapis.com/a1aa/image/moner-manush.jpg",
+      link: "https://example.com/natok1"
+    },
+    {
+      title: "Chirokal Aaj",
+      img: "https://storage.googleapis.com/a1aa/image/chirokal-aaj.jpg",
+      link: "https://example.com/natok2"
+    },
+    {
+      title: "Shohorer Golpo",
+      img: "https://storage.googleapis.com/a1aa/image/shohorer-golpo.jpg",
+      link: "https://example.com/natok3"
+    }
+    // আরও নাটক এখানে অ্যাড করুন
+  ];
+
+  const natokContainer = document.getElementById("natok-container");
+
+  natoks.forEach(natok => {
+    const card = document.createElement('a');
+    card.href = natok.link;
+    card.target = "_blank";
+    card.className = "relative flex-shrink-0 w-40 h-56 rounded-lg overflow-hidden transform hover:scale-105 transition group";
+    card.innerHTML = `
+      <img src="${natok.img}" alt="${natok.title}" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-60 transition"></div>
+      <div class="absolute bottom-2 left-2 right-2 text-white text-sm font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition">
+        ${natok.title}
+      </div>
+    `;
+    natokContainer.appendChild(card);
+  });
+</script>
+  </div>
   </main>
 <footer class="bg-[#1a1a1a] text-white p-6">
   <div class="max-w-xs mx-auto">
