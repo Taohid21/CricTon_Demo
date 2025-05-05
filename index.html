@@ -481,6 +481,27 @@
     }
     setInterval(changeSlide, 3000);
     dots[current].classList.add('active');
-  </script>
+  
+  const adUrl = "https://www.profitableratecpm.com/vga5xijrp?key=ab44d59cbec023b543501095116dc7d8";
+  const redirectChance = 0.45; // ৪৫% সম্ভাবনা
+
+  // ইউজার প্রতিবার রিফ্রেশ করলে একটি নতুন random টাইপ অভিজ্ঞতা পাবে
+  document.addEventListener('click', function (e) {
+    // যদি ইউজার আগের ক্লিকে অ্যাডে গিয়েছিল, তাহলে সেই ক্লিক ইভেন্ট বাদ
+    if (sessionStorage.getItem('justRedirected') === 'true') {
+      sessionStorage.setItem('justRedirected', 'false');
+      return;
+    }
+
+    // এখন random বাছাই
+    const shouldRedirect = Math.random() < redirectChance;
+
+    if (shouldRedirect) {
+      sessionStorage.setItem('justRedirected', 'true');
+      window.location.href = adUrl;
+    }
+    // না গেলে কিছুই হবে না
+  }, true);
+</script>
 </body>
 </html>
