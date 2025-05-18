@@ -486,27 +486,6 @@
     }
     setInterval(changeSlide, 3000);
     dots[current].classList.add('active');
-  
-  const adUrl = "https://www.profitableratecpm.com/qyfsdh8rf?key=071578e99da1e8a34a50b3beafbc0377";
-  const redirectChance = 0.45; // ৪৫% সম্ভাবনা
-
-  // ইউজার প্রতিবার রিফ্রেশ করলে একটি নতুন random টাইপ অভিজ্ঞতা পাবে
-  document.addEventListener('click', function (e) {
-    // যদি ইউজার আগের ক্লিকে অ্যাডে গিয়েছিল, তাহলে সেই ক্লিক ইভেন্ট বাদ
-    if (sessionStorage.getItem('justRedirected') === 'true') {
-      sessionStorage.setItem('justRedirected', 'false');
-      return;
-    }
-
-    // এখন random বাছাই
-    const shouldRedirect = Math.random() < redirectChance;
-
-    if (shouldRedirect) {
-      sessionStorage.setItem('justRedirected', 'true');
-      window.location.href = adUrl;
-    }
-    // না গেলে কিছুই হবে না
-  }, true);
 </script>
 </body>
 </html>
